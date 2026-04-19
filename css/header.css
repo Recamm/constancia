@@ -1,0 +1,114 @@
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 1px 10px -8px var(--color-grey);
+    position: fixed;
+    background-color: var(--color-w);
+
+    z-index: 1000;
+}
+
+.headerPC {
+    width: var(--width-page);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--header-height);
+    padding: var(--header-padding);
+
+    h1 {
+        font-family: var(--font-family-title);
+        color: var(--color-dark-green);
+        font-size: var(--font-size-semititle);
+        font-weight: var(--font-weight-bold);
+    }
+    
+    a {
+        all: unset;
+        font-size: var(--font-size-tiny);
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: flex;
+        gap: 30px;
+
+        a {
+            color: var(--color-grey);
+            transition: var(--short-transition);
+
+            &:hover {
+                color: var(--color-light-green);
+            }
+        }
+    }
+
+    .unetenos {
+        all: unset;
+        background-color: var(--color-dark-green);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 22px;
+        border-radius: 200px;
+
+        color: var(--color-w);
+        font-weight: var(--font-weight-normal);
+
+        transition: var(--mini-transition);
+
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--color-light-green);
+        }
+
+        &:active {
+            transform: scale(0.96);
+        }
+    }
+}
+
+/* RESPONSIVE */
+
+/* TABLET */
+@media (max-width: 1450px) {
+    .headerPC {
+        width: 100%;
+        padding: 0 40px;
+    }
+}
+
+/* CELULAR */
+@media (max-width: 768px) {
+    .headerPC {
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        
+        padding: 12px 20px;
+    }
+
+    .headerPC > a:first-child {
+        flex: 1;
+    }
+
+    .headerPC .menu {
+        order: 3;
+        
+        justify-content: center;
+        gap: 24px;
+        padding: 10px 0;
+        width: 100%;
+
+        border-top: 1px solid var(--color-bk-2);
+        margin-top: 10px;
+    }
+
+    .headerPC .unetenos {
+        padding: 8px 16px;
+        font-size: var(--font-size-tiny-2);
+    }
+}

@@ -1,0 +1,136 @@
+.titulo-ejercicios {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: var(--padding-titulo) 0;
+}
+
+.musculo {
+    background-color: var(--color-bk-1);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: calc(var(--header-height) + 20px) 0;
+    
+    .musculo-contenido {
+        width: var(--width-page);
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        .musculo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+
+            /* .tier-card-s-top {
+                border: 2px solid var(--color-tier-S-top-bg);
+            }
+
+            .tier-card-s {
+                border: 2px solid var(--color-tier-S-bg);
+            }
+
+            .tier-card-a {
+                border: 2px solid var(--color-tier-A-bg);
+            } */
+
+            .musculo-card {
+                display: flex;
+                flex-direction: column;
+                gap: 13px;
+                padding: 32px;
+
+                background-color: var(--color-w);
+                border-radius: 24px;
+                box-shadow: 0 2px 8px var(--color-shadow-lighter);
+
+                h3 {
+                    font-size: var(--font-size-almost-semititle);
+                    font-weight: var(--font-weight-almost-bold);
+                    color: var(--color-grey);
+                    line-height: 1.3;
+                }
+
+                p {
+                    font-family: var(--font-family-text);
+                    font-size: var(--font-size-tiny);
+                    color: var(--color-muted);
+                }
+
+                .tier-general {
+                    display: inline-block;
+                    width: fit-content;
+
+                    padding: 4px 12px;
+                    border-radius: 100px;
+                
+                    font-size: var(--font-size-tiny-2);
+                    font-weight: var(--font-weight-bold);
+                }
+
+                .tier-s-mejor {
+                    background-color: var(--color-tier-S-top-bg);
+                    color: var(--color-tier-S-top);
+                }
+
+                .tier-s {
+                    background-color: var(--color-tier-S-bg);
+                    color: var(--color-tier-S);
+                }
+
+                .tier-a {
+                    background-color: var(--color-tier-A-bg);
+                    color: var(--color-tier-A);
+                }
+            }
+        }
+    }
+}
+
+.musculo-alternativo {
+    background-color: var(--color-bk-2);
+}
+
+/* NOTA FINAL */
+.ejercicios-nota {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    background-color: var(--color-dark-green);
+    padding: 40px 20px;
+
+    .nota-contenedor {
+        width: var(--width-page);
+
+        .nota {
+            font-family: var(--font-family-text);
+            font-size: var(--font-size);
+            color: var(--color-light-green-2);
+   
+            .nota strong {
+                color: var(--color-w);
+                font-weight: var(--font-weight-bold);
+            }
+        }   
+    }
+}
+
+/* RESPONSIVE */
+
+/* CELULAR */
+@media (max-width: 768px) {
+    .titulo-ejercicios {
+        padding: 50px 0;
+    }
+
+    .musculo .musculo-contenido .musculo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .musculo .musculo-contenido {
+        gap: 24px;
+    }
+}
+
